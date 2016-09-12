@@ -1,19 +1,57 @@
 body {
-  background-color: $light-gray;
-  color: $medium-gray;
+  background-color: #fff;
 }
 
-.delete-me {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+.main-container {
+    transition: opacity .3s ease-in-out;
+    opacity: 1;
+}
 
-  .container {
-    text-align: center;
+.main-container.visible{
+    opacity: 0.1;
+}
 
-    h1 {
-      font-weight: 200;
+.main-title {
+    font-size: em(48px);
+    font-weight: 600;
+    margin-bottom: 30px;
+
+    @include media($medium-screen) {
+        font-size: em(60px);
     }
-  }
+}
+
+.secondary-title {
+    font-size: em(20px);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    @include media($medium-screen) {
+        font-size: em(24px);
+        margin-bottom: 20px;
+    }
+}
+
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

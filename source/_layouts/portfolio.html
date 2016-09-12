@@ -1,0 +1,18 @@
+---
+# Layouts must stay in HTML
+---
+<!DOCTYPE html>
+<html lang="en">
+  {% include LayoutThings/head.html %}
+  <body>
+    {% include navigation.html %}
+    <div class="main-container">
+      {% include portfolio-head.html %}
+      <div class="portfolio-container">
+        {{ content }}
+      </div> 
+      {% include footer.html %}
+    </div>
+    {% include LayoutThings/scripts.html %}
+  </body>
+</html>

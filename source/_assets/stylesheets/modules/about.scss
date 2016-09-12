@@ -1,0 +1,33 @@
+.about {
+  display: flex;
+  align-items: stretch;
+
+  .box {
+    width: 100%;
+    justify-content: center;
+
+    @include media($medium-screen) {
+      width: 50%;
+    }
+  }
+
+  .text {
+    background-color: pink;
+    padding: 15px;
+
+    @include media($medium-screen) {
+      padding: 50px;
+    }
+
+  }
+
+  .picture {
+    background: image-url("profil.jpg");
+    background-size: cover;
+    background-position: center; 
+     
+    @include media(max-width $medium-screen) {
+      display: none;  
+    }
+  }
+}

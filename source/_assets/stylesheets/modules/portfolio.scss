@@ -1,0 +1,39 @@
+#portfolio {
+  padding: 100px 0;
+  text-align: center;
+
+  .container {
+    @include outer-container(900px);
+
+    .grid {
+      column-count: 1;
+      column-gap: 15px;
+      margin: 15px;
+
+      @include media($large-screen) {
+        column-count: 4;
+      }
+
+      @include media(min-width $medium-screen max-width $large-screen) {
+        column-count: 2;
+      }
+
+      .item {
+        background-color: #eee;
+        height: 250px;
+        display: inline-block;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: none;
+
+        .item-link {
+          @include fill-parent;
+          display: block;
+          height: inherit;
+        }
+      }
+    }
+  }
+
+}

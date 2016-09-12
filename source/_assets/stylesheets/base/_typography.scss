@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css?family=Poppins:400,500,600,700';
+
 body {
   @include font-feature-settings("kern", "liga", "pnum");
   -webkit-font-smoothing: antialiased;
@@ -16,7 +18,17 @@ h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  margin: 0 0 $small-spacing / 2;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: $big-font-size;
+}
+
+h2 {
+  font-size: em(48px);
+  font-weight: 500;
 }
 
 p {
@@ -24,14 +36,14 @@ p {
 }
 
 a {
-  color: $action-color;
+  color: $base-font-color;
   text-decoration: none;
-  transition: color 0.1s linear;
+  transition: color 0.2s linear;
 
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 15%);
+    color: $action-color;
   }
 
   &:active,

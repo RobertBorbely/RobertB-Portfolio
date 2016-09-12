@@ -1,12 +1,17 @@
 // Typography
-$base-font-family: $helvetica;
+$base-font-family: 'Poppins', sans-serif;
 $heading-font-family: $base-font-family;
+$big-font-size: em(72px);
+
+//Screen sizes
+$medium-screen: em(640);
+$large-screen: em(860);
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: em(18px);
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height: 1.7;
 $heading-line-height: 1.2;
 
 // Other Sizes
@@ -20,11 +25,13 @@ $blue: #477dca;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$dark-blue: #10121d;
+$orange: #fa6c01;
 
 // Font Colors
 $base-background-color: #fff;
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-font-color: $dark-blue;
+$action-color: $orange;
 
 // Border
 $base-border-color: $light-gray;
